@@ -1,0 +1,37 @@
+比较运算符 
+	==，！= ，>,<,>=,<= ，contains，is/instance of
+逻辑运算符
+	&&，|| ，~=（正则表达式匹配）
+数学运算符
+	+，-，*，/ 
+其它运算符
+	+，字符串连接运算，如："foo" +"bar"
+	#，字符连接运算，如：1 # 2 返回 "12"
+	in，投影整个项目集合，如：(foo in list)
+	=，赋值运算符，如：var = "foobar"
+值判断
+	 foo == 'bar' 
+为 null 测试
+	null 和 nil 都可以用来表示一个空值，如：foo == null ; foo == nil;
+强制转换
+	如："123" == 123; 这个表达式的值为 true, 因为为了执行比较，强制类型转换系统会隐式的将数字 123 转换成字符串。
+列表、map 和数组
+	['Bob' : new Person('Bob'), 'Michael' : new Person('Michael')]
+	等价于
+	Map map = new HashMap();
+	map.put("Bob", new Person("Bob"));
+	map.put("Michael", new Person("Michael"));
+获取系统内置参数
+	user.userid 当前登陆用户编号
+调用取值范围参数
+	取值范围编号.字段名称。如：emp.emp_name；emp为取值范围编号，emp_name为sql内返回字段。
+-----------------------------------------------------
+举例：
+	if(user.userid == 'admin'){//取当前用户编号，判断是否为admin
+		return 'BG000';//返回顶级机构编号
+	}else{
+		return emp.orgcd;//调用取值范围，返回当前用户所在机构编号
+	}
+		
+	
+	
